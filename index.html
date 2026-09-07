@@ -545,9 +545,9 @@ textarea{
   <div class="container application-layout">
     <div class="application-intro">
       <div class="eyebrow">Founding Families · Winter Park</div>
-      <h2 class="display">Help shape the first circle.</h2>
-      <p>We are validating demand before choosing our permanent space. Tell us about your dog and what exceptional daycare would need to look like for your family.</p>
-      <p class="notice">No payment or deposit. This application is a priority list, not a guaranteed reservation.</p>
+      <h2 class="display">Be among the first.</h2>
+      <p>Founding Families receive priority consideration for our intentionally limited opening group, first access to evaluation appointments, and launch updates before public enrollment opens.</p>
+      <p class="notice">No payment or deposit. Apply in under a minute. This is a priority list, not a guaranteed reservation.</p>
     </div>
 
     <form class="form-card" id="foundingForm" action="https://formspree.io/f/xgaenygp" method="POST" novalidate>
@@ -560,33 +560,17 @@ textarea{
         <label>Email
           <input name="Email" type="email" autocomplete="email" required>
         </label>
-        <label>Phone
-          <input name="Phone" type="tel" autocomplete="tel" required>
-        </label>
         <label>Home ZIP Code
           <input name="Home ZIP Code" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}(-[0-9]{4})?" required>
         </label>
-      </div>
-
-      <h3 class="form-section-title">About Your Dog</h3>
-      <div class="form-grid">
         <label>Dog's Name
           <input name="Dog's Name" required>
         </label>
-        <label>Age
-          <input name="Age" required>
+
+        <label class="field-full">Tell us about your dog
+          <input name="Dog Profile" placeholder="Breed / mix, age, approximate weight" required>
         </label>
-        <label class="field-full">Breed / Mix and Approximate Weight
-          <input name="Breed / Mix and Approximate Weight" required>
-        </label>
-        <label>Spay / Neuter Status
-          <select name="Spay / Neuter Status" required>
-            <option value="">Select one</option>
-            <option>Spayed / neutered</option>
-            <option>Intact</option>
-            <option>Too young / scheduled</option>
-          </select>
-        </label>
+
         <label>Ideal Daycare Rhythm
           <select name="Ideal Daycare Rhythm" required>
             <option value="">Select days per week</option>
@@ -597,7 +581,8 @@ textarea{
             <option>Occasional / as needed</option>
           </select>
         </label>
-        <label class="field-full">Comfortable Daily Rate
+
+        <label>Comfortable Daily Rate
           <select name="Comfortable Daily Rate" required>
             <option value="">Select a range</option>
             <option>$50–59 per day</option>
@@ -609,26 +594,12 @@ textarea{
         </label>
       </div>
 
-      <h3 class="form-section-title">Preferred Days</h3>
-      <div class="days" aria-label="Preferred days">
-        <label class="day"><input type="checkbox" name="Preferred Days" value="Monday"><span>Monday</span></label>
-        <label class="day"><input type="checkbox" name="Preferred Days" value="Tuesday"><span>Tuesday</span></label>
-        <label class="day"><input type="checkbox" name="Preferred Days" value="Wednesday"><span>Wednesday</span></label>
-        <label class="day"><input type="checkbox" name="Preferred Days" value="Thursday"><span>Thursday</span></label>
-        <label class="day"><input type="checkbox" name="Preferred Days" value="Friday"><span>Friday</span></label>
-      </div>
-
-      <h3 class="form-section-title">Tell Us More</h3>
-      <label>What should we know about your dog—and what are you looking for that you have not found elsewhere?
-        <textarea name="What should we know about your dog—and what are you looking for that you have not found elsewhere?" required></textarea>
-      </label>
-
       <label class="consent">
         <input type="checkbox" name="Consent" required>
         <span>I agree to receive KAWAIGER launch updates and understand this is not a confirmed reservation.</span>
       </label>
 
-      <button class="button submit" type="submit">Submit Founding Family Application</button>
+      <button class="button submit" type="submit">Apply for Founding Family Priority</button>
       <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
     </form>
   </div>
@@ -705,10 +676,6 @@ textarea{
       formData.append("_subject", "KAWAIGER Founding Family Application");
       formData.append("Submission Source", "www.kawaiger.com");
 
-      if (!formData.getAll("Preferred Days").length) {
-        formData.append("Preferred Days", "Not specified");
-      }
-
       const response = await fetch(form.action, {
         method: "POST",
         body: formData,
@@ -719,7 +686,7 @@ textarea{
 
       if (response.ok) {
         form.reset();
-        showStatus("Thank you! Your Founding Family application has been received. We will be in touch with launch updates and next steps.");
+        showStatus("Thank you! Your Founding Family application has been received. You are now on the KAWAIGER priority list, and we will be in touch with launch updates and next steps.");
         status.scrollIntoView({ behavior: "smooth", block: "center" });
       } else {
         let message = "We couldn't submit your application. Please try again.";
