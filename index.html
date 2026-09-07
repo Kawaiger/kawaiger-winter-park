@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="KAWAIGER Winter Park — petite premium dog daycare. Founding Family applications now open.">
+<title>KAWAIGER Winter Park | Petite Premium Dog Daycare</title>
+<style>
+:root{
+  --espresso:#2d1d18;
+  --espresso-2:#3b2720;
+  --brown:#50372e;
+  --brown-2:#64483b;
+  --cream:#f3eadf;
+  --cream-2:#fbf6ef;
+  --gold:#c7a36b;
+  --gold-dark:#a8824e;
+  --ink:#33231c;
+  --muted:#75655b;
+  --line:rgba(73,48,37,.18);
+  --white:#fffaf4;
+  --shadow:0 22px 60px rgba(39,24,17,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream-2);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+img{max-width:100%;display:block}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(45,29,24,.96);
+  color:var(--white);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.11);
+}
+.header-inner{
+  max-width:1240px;
+  margin:auto;
+  min-height:82px;
+  padding:0 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.brand{
+  font-family:Georgia,"Times New Roman",serif;
+  letter-spacing:.23em;
+  font-size:23px;
+  white-space:nowrap;
+}
+.brand small{
+  display:block;
+  margin-top:6px;
+  text-align:center;
+  color:var(--gold);
+  font:9px Arial,Helvetica,sans-serif;
+  letter-spacing:.36em;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.nav a{opacity:.9}
+.nav .cta{
+  border:1px solid var(--gold);
+  padding:12px 16px;
+  color:var(--gold);
+}
+.hero{
+  min-height:690px;
+  color:var(--white);
+  background:
+    radial-gradient(circle at 82% 25%,rgba(199,163,107,.20),transparent 27%),
+    radial-gradient(circle at 5% 100%,rgba(199,163,107,.10),transparent 32%),
+    linear-gradient(135deg,#51382e 0%,#37241e 48%,#241713 100%);
+  display:flex;
+  align-items:center;
+}
+.hero-inner{
+  width:100%;
+  max-width:1240px;
+  margin:auto;
+  padding:105px 28px 115px;
+}
+.eyebrow{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.21em;
+  font-size:11px;
+  font-weight:700;
+}
+.hero h1,.display{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
+  letter-spacing:-.035em;
+}
+.hero h1{
+  margin:26px 0 24px;
+  max-width:860px;
+  font-size:clamp(52px,7vw,92px);
+  line-height:.99;
+}
+.hero .lead{
+  max-width:760px;
+  margin:0;
+  font:clamp(20px,2vw,28px)/1.48 Georgia,"Times New Roman",serif;
+  color:#f5ece4;
+}
+.hero .support{
+  max-width:720px;
+  margin:22px 0 0;
+  color:#d8c9bd;
+  line-height:1.75;
+  font-size:16px;
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:22px;
+  margin-top:34px;
+}
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 24px;
+  border:1px solid var(--gold);
+  background:var(--gold);
+  color:#261711;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:11px;
+  font-weight:700;
+  cursor:pointer;
+}
+.text-link{
+  color:#eadfD5;
+  border-bottom:1px solid rgba(199,163,107,.72);
+  padding-bottom:6px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+
+.section{
+  padding:96px 28px;
+}
+.container{
+  max-width:1180px;
+  margin:auto;
+}
+.section-head{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:8vw;
+  align-items:start;
+}
+.display{
+  margin:20px 0 0;
+  font-size:clamp(40px,5vw,66px);
+  line-height:1.04;
+}
+.section-copy{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:17px;
+}
+.section-copy p:first-child{margin-top:0}
+
+.difference{
+  background:var(--cream);
+}
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:58px;
+}
+.feature{
+  background:rgba(255,255,255,.48);
+  border:1px solid var(--line);
+  min-height:285px;
+  padding:32px;
+}
+.feature-number{
+  color:var(--gold-dark);
+  font-size:12px;
+  letter-spacing:.18em;
+}
+.feature h3{
+  margin:56px 0 16px;
+  font:30px/1.1 Georgia,"Times New Roman",serif;
+}
+.feature p{
+  color:#6c5a4f;
+  line-height:1.72;
+  margin:0;
+}
+
+.for-dogs{
+  background:#443029;
+  color:var(--white);
+}
+.for-dogs .section-copy{color:#d9cbc1}
+.for-dogs .display{max-width:650px}
+.fit-list{
+  margin-top:42px;
+  border-top:1px solid rgba(255,255,255,.16);
+}
+.fit-list div{
+  padding:19px 0;
+  border-bottom:1px solid rgba(255,255,255,.16);
+  color:#e8ddd5;
+}
+.fineprint{
+  margin-top:27px;
+  color:#bdaea4;
+  line-height:1.7;
+  font-size:13px;
+}
+
+.application{
+  background:var(--cream-2);
+}
+.application-layout{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  gap:58px;
+  align-items:start;
+}
+.application-intro{
+  position:sticky;
+  top:118px;
+}
+.application-intro .display{
+  font-size:clamp(42px,4.5vw,64px);
+}
+.application-intro p{
+  color:var(--muted);
+  line-height:1.78;
+  font-size:16px;
+}
+.application-intro .notice{
+  margin-top:28px;
+  padding-top:25px;
+  border-top:1px solid var(--line);
+  font-size:14px;
+}
+
+.form-card{
+  background:#fff;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(75,49,38,.12);
+  padding:42px;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.form-grid.one{grid-template-columns:1fr}
+label,legend{
+  display:block;
+  margin:0;
+  color:#604c41;
+  text-transform:uppercase;
+  letter-spacing:.105em;
+  font-size:10px;
+  font-weight:700;
+}
+input,select,textarea{
+  width:100%;
+  margin-top:9px;
+  border:1px solid #d8cabf;
+  background:#fcfaf7;
+  color:var(--ink);
+  border-radius:0;
+  padding:14px 13px;
+  outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:var(--gold-dark);
+  box-shadow:0 0 0 3px rgba(199,163,107,.13);
+}
+textarea{
+  min-height:120px;
+  resize:vertical;
+}
+.field-full{grid-column:1/-1}
+.form-section-title{
+  margin:34px 0 18px;
+  padding-top:28px;
+  border-top:1px solid #e8ddd4;
+  color:var(--ink);
+  font:24px Georgia,"Times New Roman",serif;
+}
+.form-section-title.first{
+  margin-top:0;
+  padding-top:0;
+  border-top:0;
+}
+.days{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+  margin-top:10px;
+}
+.day{
+  position:relative;
+}
+.day input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+.day span{
+  display:block;
+  padding:12px 8px;
+  text-align:center;
+  border:1px solid #d8cabf;
+  background:#fcfaf7;
+  color:#665248;
+  text-transform:none;
+  letter-spacing:0;
+  font-size:12px;
+  cursor:pointer;
+}
+.day input:checked + span{
+  background:var(--espresso);
+  color:var(--white);
+  border-color:var(--espresso);
+}
+.consent{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin:24px 0;
+  color:#67564c;
+  text-transform:none;
+  letter-spacing:0;
+  font-size:13px;
+  line-height:1.5;
+  font-weight:400;
+}
+.consent input{
+  width:auto;
+  margin:2px 0 0;
+}
+.submit{
+  width:100%;
+  border:0;
+  min-height:56px;
+}
+.submit:disabled{
+  opacity:.65;
+  cursor:wait;
+}
+.form-status{
+  display:none;
+  margin-top:18px;
+  padding:14px 16px;
+  background:#f4eee6;
+  border-left:3px solid var(--gold-dark);
+  color:#554238;
+  line-height:1.55;
+  font-size:13px;
+}
+.form-status.show{display:block}
+
+.faq{
+  background:#efe4d7;
+}
+.faq-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:45px;
+}
+.faq-item{
+  border-top:1px solid #c9b8aa;
+  padding-top:22px;
+}
+.faq-num{
+  color:var(--gold-dark);
+  font-size:11px;
+}
+.faq-item h3{
+  font:24px/1.2 Georgia,"Times New Roman",serif;
+  margin:20px 0 12px;
+}
+.faq-item p{
+  color:#6d5b50;
+  line-height:1.7;
+  font-size:15px;
+}
+
+.footer{
+  background:var(--espresso);
+  color:#d9cbc1;
+  padding:48px 28px;
+}
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:26px;
+}
+.footer p{
+  margin:0;
+  font-size:12px;
+  color:#baa99e;
+}
+.back-top{
+  color:var(--gold);
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+@media(max-width:900px){
+  .nav a:not(.cta){display:none}
+  .hero{min-height:auto}
+  .section-head,.application-layout{grid-template-columns:1fr}
+  .application-intro{position:static}
+  .feature-grid,.faq-grid{grid-template-columns:1fr}
+  .feature{min-height:auto}
+}
+@media(max-width:650px){
+  .header-inner{padding:0 18px;min-height:72px}
+  .brand{font-size:19px}
+  .nav .cta{padding:10px 11px;font-size:9px}
+  .hero-inner{padding:78px 20px 86px}
+  .hero h1{font-size:50px}
+  .section{padding:70px 20px}
+  .form-card{padding:25px 20px}
+  .form-grid{grid-template-columns:1fr}
+  .field-full{grid-column:auto}
+  .days{grid-template-columns:1fr 1fr}
+  .footer-inner{display:block}
+  .footer p{margin-top:20px}
+}
+</style>
+</head>
+<body id="top">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="KAWAIGER home">KAWAIGER<small>WINTER PARK</small></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#difference">KAWAIGER</a>
+      <a href="#apply">Founding Families</a>
+      <a href="#apply" class="cta">Apply for Priority</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Coming to Winter Park · Founding Family Applications Open</div>
+    <h1>A different kind<br>of dog daycare.</h1>
+    <p class="lead">Petite, personal daytime care for dogs whose families want more than supervision. A place where each dog is known, loved, and gently guided.</p>
+    <div class="hero-actions">
+      <a class="button" href="#apply">Apply for Priority</a>
+      <a class="text-link" href="#difference">Discover KAWAIGER ↘</a>
+    </div>
+  </div>
+</section>
+
+<section class="section difference" id="difference">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">01 · The KAWAIGER Difference</div>
+        <h2 class="display">Not just watched.<br>Known. Loved. Guided.</h2>
+      </div>
+      <div class="section-copy">
+        <p>Care should feel personal. KAWAIGER is being designed for families who know that a busy room is not the same as a good day.</p>
+        <p>Our model is intentionally small: compatible companions, attentive human presence, predictable rhythms, and space to step away. Because rest, safety, and being understood matter as much as play.</p>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature">
+        <div class="feature-number">01</div>
+        <h3>Known personally</h3>
+        <p>A deliberately limited group means your dog is known—their rhythms, preferences, friendships, and signals.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-number">02</div>
+        <h3>Calm, thoughtful days</h3>
+        <p>Carefully matched companionship, gentle structure, play, decompression, and a private place to truly rest.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-number">03</div>
+        <h3>Fit before volume</h3>
+        <p>Every dog is considered individually. Compatibility and wellbeing guide the day—not maximum headcount.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section for-dogs">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Who We Are Designing For</div>
+        <h2 class="display">The dog in front of us.</h2>
+      </div>
+      <div class="section-copy">
+        <p>Puppies learning the world. Seniors who need a gentler pace. Social dogs who thrive with a few well-chosen friends. And suitable intact dogs considered individually after evaluation.</p>
+        <div class="fit-list">
+          <div>Deliberately limited founding capacity</div>
+          <div>Private rest space for every dog</div>
+          <div>Carefully matched companionship</div>
+          <div>Daytime care—no transport or home visits</div>
+        </div>
+        <p class="fineprint">For safety, females in active heat cannot attend. All enrollments are subject to a temperament and care-fit evaluation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section application" id="apply">
+  <div class="container application-layout">
+    <div class="application-intro">
+      <div class="eyebrow">Founding Families · Winter Park</div>
+      <h2 class="display">Help shape the first circle.</h2>
+      <p>We are validating demand before choosing our permanent space. Tell us about your dog and what exceptional daycare would need to look like for your family.</p>
+      <p class="notice">No payment or deposit. This application is a priority list, not a guaranteed reservation.</p>
+    </div>
+
+    <form class="form-card" id="foundingForm" action="https://formspree.io/f/xgaenygp" method="POST" novalidate>
+      <h3 class="form-section-title first">Founding Family Application</h3>
+
+      <div class="form-grid">
+        <label>Your Name
+          <input name="Your Name" autocomplete="name" required>
+        </label>
+        <label>Email
+          <input name="Email" type="email" autocomplete="email" required>
+        </label>
+        <label>Phone
+          <input name="Phone" type="tel" autocomplete="tel" required>
+        </label>
+        <label>Home ZIP Code
+          <input name="Home ZIP Code" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}(-[0-9]{4})?" required>
+        </label>
+      </div>
+
+      <h3 class="form-section-title">About Your Dog</h3>
+      <div class="form-grid">
+        <label>Dog's Name
+          <input name="Dog's Name" required>
+        </label>
+        <label>Age
+          <input name="Age" required>
+        </label>
+        <label class="field-full">Breed / Mix and Approximate Weight
+          <input name="Breed / Mix and Approximate Weight" required>
+        </label>
+        <label>Spay / Neuter Status
+          <select name="Spay / Neuter Status" required>
+            <option value="">Select one</option>
+            <option>Spayed / neutered</option>
+            <option>Intact</option>
+            <option>Too young / scheduled</option>
+          </select>
+        </label>
+        <label>Ideal Daycare Rhythm
+          <select name="Ideal Daycare Rhythm" required>
+            <option value="">Select days per week</option>
+            <option>1 day per week</option>
+            <option>2 days per week</option>
+            <option>3 days per week</option>
+            <option>4–5 days per week</option>
+            <option>Occasional / as needed</option>
+          </select>
+        </label>
+        <label class="field-full">Comfortable Daily Rate
+          <select name="Comfortable Daily Rate" required>
+            <option value="">Select a range</option>
+            <option>$50–59 per day</option>
+            <option>$60–69 per day</option>
+            <option>$70–79 per day</option>
+            <option>$80+ per day</option>
+            <option>Depends on what is included</option>
+          </select>
+        </label>
+      </div>
+
+      <h3 class="form-section-title">Preferred Days</h3>
+      <div class="days" aria-label="Preferred days">
+        <label class="day"><input type="checkbox" name="Preferred Days" value="Monday"><span>Monday</span></label>
+        <label class="day"><input type="checkbox" name="Preferred Days" value="Tuesday"><span>Tuesday</span></label>
+        <label class="day"><input type="checkbox" name="Preferred Days" value="Wednesday"><span>Wednesday</span></label>
+        <label class="day"><input type="checkbox" name="Preferred Days" value="Thursday"><span>Thursday</span></label>
+        <label class="day"><input type="checkbox" name="Preferred Days" value="Friday"><span>Friday</span></label>
+      </div>
+
+      <h3 class="form-section-title">Tell Us More</h3>
+      <label>What should we know about your dog—and what are you looking for that you have not found elsewhere?
+        <textarea name="What should we know about your dog—and what are you looking for that you have not found elsewhere?" required></textarea>
+      </label>
+
+      <label class="consent">
+        <input type="checkbox" name="Consent" required>
+        <span>I agree to receive KAWAIGER launch updates and understand this is not a confirmed reservation.</span>
+      </label>
+
+      <button class="button submit" type="submit">Submit Founding Family Application</button>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="container">
+    <div class="eyebrow">A Few Honest Answers</div>
+    <div class="faq-grid">
+      <article class="faq-item">
+        <div class="faq-num">01</div>
+        <h3>Where will KAWAIGER be?</h3>
+        <p>We are evaluating suitable locations in and around Winter Park. Founding Family ZIP codes will help us make the right choice.</p>
+      </article>
+      <article class="faq-item">
+        <div class="faq-num">02</div>
+        <h3>When will you open?</h3>
+        <p>The date will follow location, zoning, and licensing confirmation. We will share progress directly with applicants.</p>
+      </article>
+      <article class="faq-item">
+        <div class="faq-num">03</div>
+        <h3>Does applying guarantee a place?</h3>
+        <p>No. It gives your family priority consideration and helps us build the safest, most sustainable founding group.</p>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="brand">KAWAIGER<small>WINTER PARK</small></div>
+      <p style="margin-top:18px">Petite premium dog daycare · Coming to Winter Park, Florida</p>
+    </div>
+    <a class="back-top" href="#top">Founding Family Application ↑</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  const form = document.getElementById("foundingForm");
+  const status = document.getElementById("formStatus");
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  function showStatus(message){
+    status.textContent = message;
+    status.classList.add("show");
+  }
+
+  function clearStatus(){
+    status.textContent = "";
+    status.classList.remove("show");
+  }
+
+  form.addEventListener("submit", async function(event){
+    event.preventDefault();
+    clearStatus();
+
+    if (!form.checkValidity()){
+      form.reportValidity();
+      showStatus("Please complete the required fields before submitting.");
+      return;
+    }
+
+    const originalButtonText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+
+    try {
+      const formData = new FormData(form);
+      formData.append("_subject", "KAWAIGER Founding Family Application");
+      formData.append("Submission Source", "www.kawaiger.com");
+
+      if (!formData.getAll("Preferred Days").length) {
+        formData.append("Preferred Days", "Not specified");
+      }
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        showStatus("Thank you! Your Founding Family application has been received. We will be in touch with launch updates and next steps.");
+        status.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        let message = "We couldn't submit your application. Please try again.";
+        try {
+          const data = await response.json();
+          if (data && data.errors && data.errors.length) {
+            message = data.errors.map(function(error){ return error.message; }).join(" ");
+          }
+        } catch (_) {}
+        showStatus(message);
+      }
+    } catch (error) {
+      showStatus("We couldn't submit your application right now. Please check your internet connection and try again.");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
