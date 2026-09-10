@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/instagram",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
+}
